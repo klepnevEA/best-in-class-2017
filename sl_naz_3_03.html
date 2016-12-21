@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="sources/app.js"></script> 
+
+  <style>
+	.bg_sl_naz_3_01 {
+		background-image: url(sources3/images/Naz_3/Naz_3_1.png);		
+	}
+			
+	.clock {
+		position: absolute;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;	
+		top: 442px;
+		width: 124px;
+		height: 125px;
+		opacity:0;
+	}
+
+	.clock_1 {
+		left: 158px;
+		background-image: url(sources3/images/Naz_3/Naz_3_2.png);	
+		-webkit-transition: all 1s ease 1s;			
+		transition: all 1s ease 1s;				
+	}
+
+	.clock_2 {
+		left: 449px;
+		background-image: url(sources3/images/Naz_3/Naz_3_3.png);	
+		-webkit-transition: all 1s ease 2s;			
+		transition: all 1s ease 2s;					
+	}	
+
+	.clock_3 {
+		left: 740px;
+		background-image: url(sources3/images/Naz_3/Naz_3_4.png);	
+		-webkit-transition: all 1s ease 3s;			
+		transition: all 1s ease 3s;					
+	}
+
+	.body.active .clock{
+		opacity:1;		
+	}
+
+  </style>	
+</head>
+
+<body id="body" class="body" data-num="#slide53">
+	<div class="bg_naz"></div>
+	<div class="bg_naz bg_sl_naz_3_01"></div>
+
+	<div class="clock clock_1"></div>
+	<div class="clock clock_2"></div>
+	<div class="clock clock_3"></div>
+
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide56" id="btn_literature" class="btn_nav btn_literature"></a>
+
+	
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<a href="#slide100" class="btn btn_logo"></a>
+
+
+<script type='text/javascript'>
+    $(function(){
+      
+      var data_num = $('#body').data('num');
+      sessionStorage.setItem('num', data_num);
+      
+  		$('#body').addClass('active');
+    });
+
+  
+	</script>	
+
+</body>
+</html>
+
+
+

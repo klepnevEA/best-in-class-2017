@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>		
+	<style>
+		.bg_sl_07 {
+			background-image: url(sources/images/sl_100/Takeda_Title_2.png);		
+		}
+
+		.bg_sl_07_2 {
+			background-image: url(sources/images/sl_100/Instr_12.png);			
+		}
+
+		.btn_sl_1 {
+			top: 342px;
+			left: 538px;
+			width: 204px;
+			height: 66px;
+		}
+
+		.btn_sl_2 {
+			top: 418px;
+			left: 538px;
+			width: 204px;
+			height: 66px;
+		}	
+
+		.btn_sl_3 {
+			top: 492px;
+			left: 538px;
+			width: 204px;
+			height: 66px;
+		}	
+
+		.btn_sl_10 {
+			top: 568px;
+			left: 538px;
+			width: 204px;
+			height: 66px;
+		}			
+
+		.btn_sl_4 {
+			top: 342px;
+			left: 283px;
+			width: 204px;
+			height: 46px;
+		}
+
+		.btn_sl_5 {
+			top: 402px;
+			left: 283px;
+			width: 204px;
+			height: 46px;
+		}
+
+		.btn_sl_6 {
+			top: 342px;
+			left: 30px;
+			width: 204px;
+			height: 46px;
+		}
+
+		.btn_sl_7 {
+			top: 401px;
+			left: 30px;
+			width: 204px;
+			height: 46px;
+		}
+
+		.btn_sl_8 {
+			top: 461px;
+			left: 30px;
+			width: 204px;
+			height: 46px;
+		}
+
+		.btn_sl_9 {
+			top: 521px;
+			left: 30px;
+			width: 204px;
+			height: 46px;
+		}
+
+	</style>
+	
+</head>
+
+<body id="body" body="body">
+	<div class="bg bg_sl_07"></div>
+	<div class="bg bg_sl_07_2"></div>	
+	<!--Кальций-->
+	<a href="sources/pdf/new/Nycomed_CaD3_Instr_Mint.pdf" class="btn btn_sl_1"></a>
+	<a href="sources/pdf/new/Nycomed_CaD3_Instr_Orange.pdf" class="btn btn_sl_2"></a>
+	<a href="sources/pdf/new/Nycomed_CaD3-Forte_Instr.pdf" class="btn btn_sl_3"></a>
+	<a href="sources/pdf/new/Nycomed_CaD3_Instr_Watermelon.pdf" class="btn btn_sl_10"></a>	
+	<!--Називин-->
+	<a href="sources/pdf/NasivinSensitive_Instr.pdf" class="btn btn_sl_4"></a>
+	<a href="sources/pdf/Nasivin_Instr.pdf" class="btn btn_sl_5"></a>
+	<!--Ксимелин-->
+	<a href="sources/pdf/Xymelin_Extra.pdf" class="btn btn_sl_6"></a>
+	<a href="sources/pdf/Xymelin_Eco.pdf" class="btn btn_sl_7"></a>
+	<a href="sources/pdf/Xymelin_Eco_menthol.pdf" class="btn btn_sl_8"></a>
+	<a href="sources/pdf/Xymelin.pdf" class="btn btn_sl_9"></a>
+
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = sessionStorage.getItem('num');
+			$('#body').append('<a href="' + data_num + '" class="btn btn_back"></a> ');
+		});
+	</script>
+
+</body>
+</html>

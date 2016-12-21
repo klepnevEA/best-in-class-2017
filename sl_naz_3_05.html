@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="sources/app.js"></script> 
+
+  <style>
+	.bg_sl_naz_3_01 {
+		background-image: url(sources3/images/Naz_5/Naz_5_1.png);		
+	}
+
+	.button {
+		position: absolute;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 362px;
+		height: 56px;
+		left: 30px;
+		opacity:0;	
+	}
+
+	.button.active,
+	.pros div.active {
+		opacity:1;
+	}
+
+	.btn_1 {
+    top: 327px;
+		background-image: url(sources3/images/Naz_5/Naz_5_2.png);	    
+	}
+
+	.btn_2 {
+    top: 399px;
+		background-image: url(sources3/images/Naz_5/Naz_5_3.png);	
+	}
+
+	.btn_3 {
+    top: 473px;
+		background-image: url(sources3/images/Naz_5/Naz_5_4.png);	
+	}	
+
+	.btn_4 {
+    top: 545px;
+		background-image: url(sources3/images/Naz_5/Naz_5_5.png);	
+	}		
+
+	.btn_5 {
+    top: 618px;
+		background-image: url(sources3/images/Naz_5/Naz_5_6.png);	
+	}
+
+	.pros {
+		position: absolute;
+		top: 327px;
+		left: 441px;
+		width: 493px;
+		height: 338px;
+	}
+
+	.pros div {
+		width: 100%;
+		height: 20%;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-image: url(sources3/images/Naz_5/Naz_5_7.png);
+		opacity:0;
+	}
+
+	.plus_2 {
+		background-position: 0 -64px;
+	}
+
+	.plus_3 {
+		background-position: 0 -133px;
+	}	
+
+	.plus_4 {
+		background-position: 0 -200px;
+	}
+
+	.plus_5 {
+		background-position: 0 -268px;
+	}	
+
+	.btn_literature {
+    left: 30px;		
+	}	
+
+  </style>	
+</head>
+
+<body id="body" class="body" data-num="#slide55">
+	<div class="bg_naz_2"></div>
+	<div class="bg_naz_2 bg_sl_naz_3_01"></div>
+
+
+	<a href="#" class="button btn_1 btn_popup" data-num="1" ></a>
+	<a href="#" class="button btn_2 btn_popup" data-num="2" ></a>
+	<a href="#" class="button btn_3 btn_popup" data-num="3" ></a>
+	<a href="#" class="button btn_4 btn_popup" data-num="4" ></a>
+	<a href="#" class="button btn_5 btn_popup" data-num="5" ></a>	
+
+	
+	<div class="pros">
+		<div class="plus_1"></div>
+		<div class="plus_2"></div>
+		<div class="plus_3"></div>
+		<div class="plus_4"></div>
+		<div class="plus_5"></div>
+	</div>
+ 	
+	
+<!-- 	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a> -->
+	<a href="#slide58" id="btn_literature" class="btn_nav btn_literature"></a>
+
+	
+<!-- 	<button data-num="home" class="btn_nav btn_home"></button> -->
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<a href="#slide100" class="btn btn_logo"></a>
+
+
+<script type='text/javascript'>
+    $(function(){
+      
+      var data_num = $('#body').data('num');
+      sessionStorage.setItem('num', data_num);
+      
+      $('.button').on('click touchend', function() {
+      	var num = $(this).data('num');
+      	$('.btn_' + num).addClass('active');
+      	$('.plus_' + num).addClass('active');
+      })
+    });
+
+  
+	</script>	
+
+</body>
+</html>
+
+
+

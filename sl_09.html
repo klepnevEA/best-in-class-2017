@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+		.bg_sl_07 {
+			background-image: url(sources/images/sl_09/CaD3_5.png);		
+		}
+
+    .btn_literature {
+       left: 30px;
+    }		
+	</style>
+	
+</head>
+
+<body id="body" body="body" data-num="#slide7">
+	<div class="bg3"></div>
+	<div class="bg3 bg_sl_07"></div>
+
+<!--     <a href="#slide1" id="btn_home" class="btn_nav btn_home"></a> -->
+    <a href="#slide7" id="btn_literature" class="btn_nav btn_literature"></a> 
+    <a href="#slide100" class="btn btn_logo"></a>
+
+<!--     <button data-num="home" class="btn_nav btn_home"></button> -->
+    <button data-num="literature" class="btn_nav btn_literature"></button> 
+
+	<script type='text/javascript'>
+		$(function(){
+			var data_num = sessionStorage.getItem('num');
+			$('#body').append('<a href="' + data_num + '" class="btn btn_back_2"></a> ');
+
+			var data_num = $('#body').data('num')
+			sessionStorage.setItem('num', data_num);
+			
+		});
+	</script>
+
+
+</body>
+</html>

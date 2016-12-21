@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+  <title>Document</title>
+  <link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="sources/app.js"></script>    
+  <style>
+   .central_img {
+      position: absolute;
+      width: 473px;
+      height: 416px;
+      top: 30px;
+      left: 285px;
+    }
+
+    .central_img div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .central_img div.active {
+      opacity:1;     
+    }  
+
+    .cad3_3_1 {
+      background-image: url(sources/images/sl_06/CaD3_3_1.png);
+      opacity:0;
+    }
+
+     .cad3_3_6 {
+      background-image: url(sources/images/sl_06/CaD3_3_6.png);
+      opacity:0;    
+    } 
+
+    .box {
+      position: absolute;
+      top: 448px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+       -webkit-transform: scale(.8, .8);
+      transform: scale(.8, .8);
+       -webkit-filter: grayscale(1);
+      filter: grayscale(1)   
+    }
+
+    .left_box {
+      background-image: url(sources/images/sl_06/CaD3_3_3.png); 
+      left: 43px; 
+      width: 415px;
+      height: 207px;           
+    }
+
+    .right_box {
+      background-image: url(sources/images/sl_06/CaD3_3_10.png);
+      left: 592px;
+      width: 386px;
+      height: 202px;             
+    }  
+
+    .box div {
+      position: absolute;
+      width: 88px;
+      height: 81px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+   
+    }
+
+    .left_box_button {
+      background-image: url(sources/images/sl_06/CaD3_3_2.png);  
+      top:-50px;
+      right: -50px;       
+    }
+
+    .right_box_button {
+      background-image: url(sources/images/sl_06/CaD3_3_9.png);  
+      top:-50px;
+      left: -50px;       
+    }
+
+    .box.active {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+       -webkit-filter: grayscale(0);
+      filter: grayscale(0)         
+    } 
+
+    .btn_literature {
+       left: 30px;
+    }
+
+
+  </style>
+</head>
+
+<body id="body" body="body"  data-num="#slide6">
+    <div class="bg3"></div>
+
+
+    <div class="central_img">
+      <div class="cad3_3_1 actGo_1 clearActive"></div>
+      <div class="cad3_3_6 actGo_2 clearActive active"></div>
+    </div>
+
+    <div id="left_box" class="box left_box actGo_1 clearActive">
+      <div class="left_box_button" data-act="actGo_1"></div>
+    </div>    
+
+    <div id="right_box" class="box right_box clearActive actGo_2 active">
+      <div class="right_box_button" data-act="actGo_2"></div>
+    </div>
+
+<!--     <a href="#slide1" id="btn_home" class="btn_nav btn_home"></a> -->
+    <a href="#slide7" id="btn_literature" class="btn_nav btn_literature"></a> 
+    <a href="#slide100" class="btn btn_logo"></a>
+
+<!--     <button data-num="home" class="btn_nav btn_home"></button> -->
+    <button data-num="literature" class="btn_nav btn_literature"></button>  
+    
+    <script type='text/javascript'>
+    $(function(){
+
+      var data_num = $('#body').data('num')
+      sessionStorage.setItem('num', data_num);
+
+      // var body = document.getElementById('body');
+      // body.addEventListener('click', actGo);
+      // body.addEventListener('touchend', actGo);
+      // function actGo(e) {
+
+      //   if(e.target.dataset.act) {
+      //     var el = document.getElementsByClassName(e.target.dataset.act),
+      //         elActive = document.getElementsByClassName('clearActive');
+      
+          
+      //     for(var i = 0; i < elActive.length; i++) {
+      //       elActive[i].classList.remove('active');
+      //     };
+
+      //     for(var i = 0; i < el.length; i++) {
+      //       el[i].classList.add('active');
+      //     };
+      //   }
+      // }
+    });
+
+
+    </script>    
+</body>
+</html>

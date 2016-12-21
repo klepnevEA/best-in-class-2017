@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>	
+	<link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="sources/app.js"></script> 	
+	<style>
+
+
+		.bg_sl_01 {
+			background-image: url(sources/images/sl_01/takeda.png);		
+		}
+
+		.btn_sl_01-1 {
+			background-image: url(sources/images/sl_01/Title_2.png);				
+		}
+
+		.btn_sl_01-2 {
+			background-image: url(sources/images/sl_01/Title_3.png);				
+		}	
+
+		.btn_sl_01-3 {
+			background-image: url(sources/images/sl_01/Title_4.png);				
+		}	
+
+		.btn_sl_01-4 {
+			background-image: url(sources/images/sl_01/Title_7.png);				
+		}	
+
+		.btn_sl_01-5 {
+			background-image: url(sources/images/sl_01/Title_6.png);				
+		}					
+
+		.btn_sl_01-6 {
+			background-image: url(sources/images/sl_01/Title_5.png);				
+		}	
+
+		.btn_sl_01-7 {
+			background-image: url(sources/images/sl_01/Title_8.png);				
+		}	
+
+		.btn_sl_01-8 {
+			background-image: url(sources/images/sl_01/Title_9.png);				
+		}					
+
+		.btn_sl_01-9 {
+			background-image: url(sources/images/sl_01/Title_10.png);				
+		}
+
+
+		.btn_sl_1 {
+	    top: 381px;
+	    left: 527px;
+	    width: 173px;
+	    height: 168px;
+		}
+
+		.btn_sl_2 {
+	    top: 568px;
+	    left: 512px;
+	    width: 234px;
+	    height: 117px;
+		}	
+
+		.btn_sl_3 {
+	    top: 368px;
+	    left: 707px;
+	    width: 132px;
+	    height: 186px;
+		}	
+
+		.btn_sl_4 {
+			top: 45px;
+	    left: 303px;
+	    width: 209px;
+	    height: 127px;
+		}
+
+		.btn_sl_5 {
+	    top: 171px;
+	    left: 194px;
+	    width: 122px;
+	    height: 196px;
+		}	
+
+		.btn_sl_6 {
+	    top: 181px;
+	    left: 326px;
+	    width: 169px;
+	    height: 176px;
+		}	
+
+		.btn_sl_7 {
+	    top: 178px;
+	    left: 526px;
+	    width: 174px;
+	    height: 178px;
+		}
+
+		.btn_sl_8 {
+	    top: 46px;
+	    left: 512px;
+	    width: 204px;
+	    height: 127px;
+		}	
+
+		.btn_sl_9 {
+	    top: 173px;
+	    left: 708px;
+	    width: 131px;
+	    height: 193px;
+		}			
+
+		.data_nav {
+			opacity:0;
+		}
+
+		.data_nav.active {
+			opacity:1;			
+		}		
+
+		.popup_01 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_5.png);			
+		}
+
+		.popup_02 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_6.png);			
+		}	
+
+		.popup_03 {
+			background-image: url(sources3/images/Naz_2/Naz_2_8.png);			
+		}					
+
+		.popup_04 {
+			background-image: url(sources3/images/Naz_2/Naz_2_5.png);			
+		}
+
+		.wrap {
+			position: absolute;
+	    top: 410px;
+	    width: 196px;
+	    height: 196px;
+		}	
+
+		.wrap img {
+			width: 100%;	
+			position: absolute;	
+			border-radius:50%;
+		}					
+
+	#popup_1 .wrap_1 {
+    left: 380px;
+    top: 269px;
+    width: 265px;
+    height: 196px;	
+	}
+
+	#popup_2 .wrap_1 {
+    left: 107px;
+    top: 326px;
+    width: 265px;
+    height: 196px;
+	}	
+
+	.popups.active {
+		z-index:9990;
+	}
+
+	</style>
+</head>
+
+<body id="body" class="body" data-num="#slide1">
+	<div class="bg"></div>
+	<div class="bg bg_sl_01"></div>
+
+	<a id="btn_sl_01-1" href="#slide2" ></a>
+	<a id="btn_sl_01-2" href="#slide2" ></a>
+	<a id="btn_sl_01-3" href="#slide2" ></a>
+
+	<a id="btn_sl_01-6" href="#slide20" ></a>
+
+	<a id="btn_sl_01-7" href="#slide31" ></a>
+
+
+	<button data-num="sl_01-1" class="btn btn_sl_1"></button>
+	<button data-num="sl_01-2" class="btn btn_sl_2"></button>
+	<button data-num="sl_01-3" class="btn btn_sl_3"></button>
+
+	<button data-num="sl_01-4" data-popup="popup_1" class="btn btn_sl_4 btn_popup"></button>
+	<button data-num="sl_01-5" data-popup="popup_2" class="btn btn_sl_5 btn_popup"></button>
+	<button data-num="sl_01-6" class="btn btn_sl_6"></button>
+
+	<button data-num="sl_01-7" class="btn btn_sl_7"></button>
+	<button data-num="sl_01-8" data-popup="popup_3" class="btn btn_sl_8 btn_popup"></button>
+	<button data-num="sl_01-9" data-popup="popup_4" class="btn btn_sl_9 btn_popup"></button>
+
+
+	<div class="bg data_nav btn_sl_01-1"></div>
+	<div class="bg data_nav btn_sl_01-2"></div>
+	<div class="bg data_nav btn_sl_01-3"></div>
+
+	<div class="bg data_nav btn_sl_01-4"></div>
+	<div class="bg data_nav btn_sl_01-5"></div>
+	<div class="bg data_nav btn_sl_01-6"></div>
+
+	<div class="bg data_nav btn_sl_01-7"></div>
+	<div class="bg data_nav btn_sl_01-8"></div>
+	<div class="bg data_nav btn_sl_01-9"></div>	
+
+
+	<div id="popup_1" class="popups popup_01">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+		<div class="wrap wrap_1">
+				<img src="sources02/images/sl_xim_2_01/gif/1_ksimelin.gif" alt="" class="img_top" />
+		</div>		
+	</div>
+
+	<div id="popup_2" class="popups popup_02">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+		<div class="wrap wrap_1">
+				<img src="sources02/images/sl_xim_2_01/gif/1_ksimelin.gif" alt="" class="img_top" />
+		</div>			
+	</div>	
+
+	<div id="popup_3" class="popups popup_03">
+		<a href="#" class="close_popup" data-popup="popup_3"></a>
+	</div>
+
+	<div id="popup_4" class="popups popup_04">
+		<a href="#" class="close_popup" data-popup="popup_4"></a>
+	</div>
+
+    <a href="#slide100" class="btn btn_logo"></a>	
+
+    <script type='text/javascript'>
+    $(function(){
+
+      var data_num = $('#body').data('num')
+      sessionStorage.setItem('num', data_num);
+
+    });
+
+
+    </script> 
+
+
+</body>
+</html>

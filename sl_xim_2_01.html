@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>	
+	<link href="sources/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="sources/app.js"></script>		
+	<style>
+		.bg_xim_2_01 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_1.png);		
+		}
+
+		.data_nav {
+		    opacity: 0;
+		    z-index:5000;
+		}
+
+		.data_nav.active {
+    	opacity: 1;
+    	z-index:1;
+		}
+
+		.btn_2_01_1 {
+	    top: 122px;
+	    left: 556px;
+	    width: 112px;
+	    height: 100px;
+	    background-image: url(sources02/images/sl_xim_2_01/Xym_1_2.png);
+		}
+
+		.btn_2_01_2 {
+	    top: 334px;
+	    left: 556px;
+	    width: 112px;
+	    height: 100px;
+	    background-image: url(sources02/images/sl_xim_2_01/Xym_1_3.png);	    
+		}
+
+		.btn_2_01_3 {
+	    top: 547px;
+	    left: 556px;
+	    width: 112px;
+	    height: 100px;
+	    background-image: url(sources02/images/sl_xim_2_01/Xym_1_4.png);		    
+		}
+
+		.btn_2_01_4 {
+	    top: 547px;
+	    left: 679px;
+	    width: 112px;
+	    height: 100px;
+	    background-image: url(sources02/images/sl_xim_2_01/Xym_1_5.png);		    
+		}
+
+
+		.popup_2_01_2 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_3_2.png);			
+		}
+
+		.popup_2_01_3 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_5.png);			
+		}
+
+		.popup_2_01_4 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_6.png);			
+		}	
+
+		.wrap {
+			position: absolute;
+	    top: 410px;
+	    width: 196px;
+	    height: 196px;
+		}	
+
+		.wrap_1 {
+			left:79px;
+		}
+
+		.wrap_2 {
+			left:302px;
+		}	
+
+		.wrap_3 {
+			left:527px;
+		}	
+
+		.wrap_4 {
+			left:750px;
+		}						
+
+		.wrap img {
+			width: 100%;	
+			position: absolute;	
+			border-radius:50%;
+		}
+
+		.img_bottom {
+			opacity:0;
+			-webkit-transition: all 1s ease .2s;		
+			transition: all 1s ease .2;
+			-webkit-transform: scale(0.5, 0.5);
+			transform: scale(0.5, 0.5);				
+		}
+
+		.wrap.active .img_top{
+			opacity:0;			
+		}
+
+		.wrap.active .img_bottom{
+			opacity:1;	
+			z-index:9000;
+			-webkit-transform: scale(1, 1);
+			transform: scale(1, 1);						
+		}
+
+		.restart_video {
+			position: absolute;
+			top:700px;
+			left:392px;
+			width: 229px;
+			height: 63px;
+			background-image: url(sources02/images/sl_xim_2_01/btn.png);
+			-webkit-background-size: 100%;
+			background-size: 100%;	
+			background-repeat: no-repeat;
+			opacity:0;
+			-webkit-transition: all 1s ease;		
+			transition: all 1s ease;
+			border:0px;
+			background-color: rgba(0,0,0,0);
+		}
+
+		.restart_video.active {
+			opacity:1;			
+		}
+
+		.restart_video.pressed {
+			background-image: url(sources02/images/sl_xim_2_01/btn_2.png);			
+		}
+
+
+
+		.popup_text {
+			position: absolute;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			top: -500px;
+			height: 262px;
+			-webkit-transition: all 1s ease;		
+			transition: all 1s ease;			
+		}
+
+		.popup_text.active {
+			top: 141px;
+		}		
+
+		.popup_text_1 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_4_2.png);
+			width: 283px;
+			left: 36px;
+		}
+
+		.popup_text_2 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_4_3.png);
+			width: 403px;
+			left: 305px;
+		}		
+
+		.popup_text_3 {
+			background-image: url(sources02/images/sl_xim_2_01/Xym_4_4.png);
+			width: 283px;
+			left: 700px;
+		}	
+
+		.close_popup_text {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 70px;
+			height: 70px;
+		}
+
+	.btn_logo {
+		z-index:7000;
+	}	
+
+	.popups.active {
+		z-index:9000;
+	}	
+
+	.close_popup {
+		height: 100px;
+	}	
+
+	#popup_2 .wrap_1 {
+    left: 380px;
+    top: 269px;
+    width: 265px;
+    height: 196px;	
+	}
+
+	#popup_3 .wrap_1 {
+    left: 107px;
+    top: 326px;
+    width: 265px;
+    height: 196px;
+	}	
+
+	</style>
+	
+</head>
+
+<body id="body" class="body" data-num="#slide20">
+	<div class="bg_xim"></div>
+	<div class="bg_xim bg_xim_2_01"></div>
+
+	<a href="#" class="bg data_nav btn_2_01_1" data-num="2_01_1"></a>
+	<a href="#" class="bg data_nav btn_2_01_2 btn_popup" data-num="2_01_2" data-popup="popup_1"></a>
+	<a href="#" class="bg data_nav btn_2_01_3 btn_popup" data-num="2_01_3" data-popup="popup_2"></a>
+	<a href="#" class="bg data_nav btn_2_01_4 btn_popup" data-num="2_01_4" data-popup="popup_3"></a>
+
+	<a id="btn_2_01_1" href="#slide21"></a>
+	<a id="btn_2_01_2" href="#"></a>
+	<a id="btn_2_01_3" href="#"></a>
+	<a id="btn_2_01_4" href="#"></a>
+
+	<div id="popup_1" class="popups popup_2_01_2">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+
+		<div id="wrap_1" class="wrap wrap_1">
+				<img src="sources02/images/sl_xim_2_01/img_1.png" alt="" class="img_bottom"  data-text-open="popup_text_1">
+				<img src="sources02/images/sl_xim_2_01/gif/1_ksimelin.gif" alt="" class="img_top" data-wrap='wrap_1'>
+		</div>
+
+		<div id="wrap_2" class="wrap wrap_2">
+				<img src="sources02/images/sl_xim_2_01/img_2.png" alt="" class="img_bottom"  data-text-open="popup_text_2">
+				<img src="sources02/images/sl_xim_2_01/gif/2_rinonorm.gif" alt="" class="img_top" data-wrap='wrap_2'>
+		</div>
+
+		<div id="wrap_3" class="wrap wrap_3">
+				<img src="sources02/images/sl_xim_2_01/img_3.png" alt="" class="img_bottom"  data-text-open="popup_text_2">
+				<img src="sources02/images/sl_xim_2_01/gif/3_tizin_ksilo.gif" alt="" class="img_top" data-wrap='wrap_3'>
+		</div>
+
+		<div id="wrap_4" class="wrap wrap_4">
+				<img src="sources02/images/sl_xim_2_01/img_4.png" alt="" class="img_bottom" data-text-open="popup_text_3">
+				<img src="sources02/images/sl_xim_2_01/gif/4_otrivin.gif" alt="" class="img_top" data-wrap='wrap_4'>
+		</div>
+
+
+		<div id="popup_text_1" class="popup_text popup_text_1">
+			<a href="#" class="close_popup_text" data-text-close="popup_text_1"></a>
+		</div>
+
+		<div id="popup_text_2" class="popup_text popup_text_2">
+			<a href="#" class="close_popup_text" data-text-close="popup_text_2"></a>
+		</div>
+
+		<div id="popup_text_3" class="popup_text popup_text_3">
+			<a href="#" class="close_popup_text" data-text-close="popup_text_3"></a>
+		</div>
+
+		<button class="restart_video"></button>
+	</div>
+
+
+	
+	<div id="popup_2" class="popups popup_2_01_3">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+		<div class="wrap wrap_1">
+				<img src="sources02/images/sl_xim_2_01/gif/1_ksimelin.gif" alt="" class="img_top" />
+		</div>		
+	</div>
+
+	<div id="popup_3" class="popups popup_2_01_4">
+		<a href="#" class="close_popup" data-popup="popup_3"></a>
+		<div class="wrap wrap_1">
+				<img src="sources02/images/sl_xim_2_01/gif/1_ksimelin.gif" alt="" class="img_top" />
+		</div>			
+	</div>	
+
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide25" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<a href="#slide100" class="btn btn_logo"></a>
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<script type='text/javascript'>
+		$(function(){
+
+			var data_num = $('#body').data('num')
+			sessionStorage.setItem('num', data_num);
+
+			var el = 'touchend';
+
+			$('.img_top').on(el, imgStart);
+			$('.restart_video').on(el, imgRestart);
+			$('.img_bottom').on(el, textOpen);
+			$('.close_popup_text').on(el, textClose);			
+		});
+
+		var count = 0;
+
+		function imgStart() {
+			var open = $(this).data('wrap');
+			console.log(open);
+			$('#' + open).addClass('active');
+			count++;
+
+			if(count>=4) {
+				$('.restart_video').removeClass('pressed');
+				$('.restart_video').addClass('active');
+			}
+		}
+
+		function imgRestart() {
+			$('.restart_video').addClass('pressed');
+			setTimeout(function(){
+				$('.wrap').removeClass('active');
+				$('.restart_video').removeClass('active');
+				$('.popup_text').removeClass('active');
+				count = 0;	
+			}, 500);
+				
+		}
+
+		function textOpen() {
+			var open = $(this).data('text-open');			
+			$('#' + open).addClass('active');
+		}
+
+		function textClose() {
+			var textClose = $(this).data('text-close');				
+			$('#' + textClose).removeClass('active');
+		}					
+
+	</script>
+
+
+</body>
+</html>

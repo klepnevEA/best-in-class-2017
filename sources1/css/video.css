@@ -1,0 +1,58 @@
+@charset "utf-8";	
+
+body {
+	height:748px;
+	background:#ffffff url(../images/bg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	padding-top:20px;
+	}
+		
+video {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	-webkit-box-shadow: 0 3px 33px 0 rgba(0,0,0,0.5);
+			box-shadow: 0 3px 33px 0 rgba(0,0,0,0.5);
+	margin: auto;
+	z-index:2;
+	}
+
+	img {
+		position:absolute; 
+		display:block; 
+		z-index:1;
+		}
+
+	h1 {
+		font:bold 24px/26px Arial, sans-serif;
+		color:#003267;
+		text-align:center;
+		}
+		h1 span {
+			font-weight:normal;
+			font-size:18px;
+			}
+			
+#btnV {
+	position:absolute;
+	top:141px;
+	left:62px;
+	width:900px;
+	height:506px;
+	background:url(../images/btnv.png) no-repeat center center ;
+	background-size:100px auto;
+	z-index:10;
+	}
+	#btnV.start {
+		background-image: url(../images/btnv.png), url(../images/poster.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:100px auto, 100% 100%;
+		}
+		
+	.play #btnV { top:-3000px; }				
+	
+	
+	

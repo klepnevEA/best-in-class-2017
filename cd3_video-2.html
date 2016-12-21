@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title></title>
+    <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../JSLibrary/js/app.js"></script>
+
+    <style>	
+
+		body {
+		    height: 748px;
+		    background: #ffffff url(sources1/images/bg.png) no-repeat 0 0;
+		    background-size: 100% 100%;
+		    padding-top: 20px;
+		}
+
+h1 {
+    font: bold 24px/26px Arial, sans-serif;
+    color: #003267;
+    text-align: center;
+}
+
+h1 span {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+* {
+    border: 0;
+    list-style-type: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+video {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    -webkit-box-shadow: 0 3px 33px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 3px 33px 0 rgba(0,0,0,0.5);
+    margin: auto;
+    z-index: 2;
+}
+
+#btnV.start {
+    background-image: url(sources1/images/btnv.png), url(sources1/images/poster.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px auto, 100% 100%;
+		z-index:10;
+}
+
+#btnV {
+    position: absolute;
+    top: 141px;
+    left: 62px;
+    width: 900px;
+    height: 506px;
+    background: url(sources1/images/btnv.png) no-repeat center center;
+    background-size: 100px auto;
+    z-index: 0;
+}
+
+    </style>
+    
+	<link  media="all" rel="stylesheet" href="css/main.css"/>
+    <link href="css/video.css" rel="stylesheet"> 
+    
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var btnV = document.getElementById("btnV");
+			var videoP = $("#video")[0];
+
+        	btnV.addEventListener('click', function(event) {
+            	videoP.play();
+				$("body").addClass('play');
+				$("#btnV").removeClass('start');
+        	});
+			
+        	videoP.addEventListener('click', function(event) {
+            	videoP.pause();
+				$("#btnV").addClass('start');
+				$("body").removeClass('play');
+        	});
+			
+		}); 
+	</script> 
+
+</head> 
+
+<body> 
+
+	<h1>Кальций-Дз Никомед:<br> грамотный подход в решении проблем дефицита кальция.<br> <span>/видео. полная версия./</span></h1>
+
+	<video width="900" height="506" id="video"> 
+		<source src="sources2/video/nikomed-2.mp4" type='video/mp4'> 
+	</video> 
+    
+    <div id="btnV" class="start"></div>
+
+</body> 
+</html>

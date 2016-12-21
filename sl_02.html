@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<title>Document</title>
+  <script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>	
+	<link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="sources/app.js"></script> 
+
+
+  <style>
+	/*sl_02*/
+
+	.bg_sl_02 {
+		background-image: url(sources/images/sl_02/CaD3_1_1.png);		
+	}
+
+	.btn_sl_02-1 {
+    top: 213px;
+    left: 129px;
+    width: 206px;
+    height: 416px;
+	}
+
+	.btn_sl_02-2 {
+    top: 213px;
+    left: 349px;
+    width: 206px;
+    height: 416px;
+	}
+
+	.btn_sl_02-3 {
+    left: 569px;
+    top: 213px;
+    width: 206px;
+    height: 416px;
+	}	
+
+	.btn_sl_02-4 {
+    left: 789px;
+    top: 213px;
+    width: 206px;
+    height: 416px;
+	}		
+
+	.block_page {
+		position: absolute;
+    width: 204px;
+    height: 414px;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		top:213px;
+		border-radius: 7px;
+		-webkit-box-shadow: inset 0px 0px 30px 2px rgba(50, 50, 50, 0.82);
+		-moz-box-shadow:    inset 0px 0px 30px 2px rgba(50, 50, 50, 0.82);
+		box-shadow:         inset 0px 0px 30px 2px rgba(50, 50, 50, 0.82);
+		border: 1px solid rgb(50, 50, 50);
+		background-color: rgba(50, 50, 50, 0.2);
+		opacity:0;
+	}
+
+	.block_page.active {
+		opacity:1;
+	} 
+
+	.block_page_1 {
+		left: 130px;
+	}
+
+	.block_page_2 {
+		left: 349px;
+	}	
+
+	.block_page_3 {
+		left: 569px;
+	}	
+
+	.block_page_4 {
+		left: 789px;
+	}		
+
+	.block_page_1.active {
+	}	
+
+	.block_page_2.active {
+	}
+
+	.block_page_3.active {
+	}					
+
+  </style>	
+</head>
+
+<body id="body" body="body" data-num="#slide2">
+	<div class="bg"></div>
+	<div class="bg bg_sl_02"></div>
+
+	<a href="#slide3" id="page_1"></a>
+	<a href="#slide3" id="page_2"></a>
+	<a href="#slide3" id="page_3"></a>
+	<a href="#slide3" id="page_4"></a>	
+	
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide7" id="btn_literature" class="btn_nav btn_literature"></a>
+
+
+	<div class="block_page block_page_1"></div>
+	<div class="block_page block_page_2"></div>
+	<div class="block_page block_page_3"></div>
+	<div class="block_page block_page_4"></div>	
+
+	<button data-num="page_1" class="btn btn_sl_02-1"></button>
+	<button data-num="page_2" class="btn btn_sl_02-2"></button>
+	<button data-num="page_3" class="btn btn_sl_02-3"></button>		
+	<button data-num="page_4" class="btn btn_sl_02-4"></button>		
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>
+
+	<a href="#slide100" class="btn btn_logo"></a>
+
+
+<script type='text/javascript'>
+    $(function(){
+      
+      var data_num = $('#body').data('num')
+      sessionStorage.setItem('num', data_num);
+      
+      var body = document.getElementById('body');
+      body.addEventListener('click', actGo);
+
+      function actGo(e) {
+
+        if(e.target.dataset.num) {
+          var page = e.target.dataset.num;
+          console.log(page);
+          sessionStorage.setItem('taste', page);
+
+          $('.block_page').removeClass('active');
+          $('.block_' + page).addClass('active');
+
+          $('.btn_nav').removeClass('active');
+          $('.btn_' + page).addClass('active');                     
+
+		      var event = new Event("click");  
+
+		    	setTimeout(function() {document.getElementById(page).dispatchEvent(event)}, 500);
+		    	setTimeout(function() {document.getElementById('btn_' + page).dispatchEvent(event)}, 500);		    	
+         
+        }
+      }
+    });
+
+  
+	</script>	
+
+</body>
+</html>
+
+
+

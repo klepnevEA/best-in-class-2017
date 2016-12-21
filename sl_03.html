@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<title>Document</title>
+	<link href="sources/style.css" rel="stylesheet" />
+
+	<script type="text/javascript" src="./sources/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="sources/app.js"></script>		
+
+	<style>
+		.pages input, .pages span {
+			position: absolute;
+			font-family: 'PT Sans NarrowBold';
+			font-size:2.5em;
+			text-align: right;
+			border:0px none;
+			background: rgba(0,0,0,0);
+			width: 200px;
+			height: 62px;    		  	
+		}
+
+		.pages input {
+			width: 176px;		
+		}
+
+		input::-webkit-input-placeholder {
+			color: #000;
+		}
+
+		/*sl_03*/
+
+		.buttons_nav {
+			position: absolute;
+			top: 360px;
+			left: 40px;
+			width: 98px;
+			height: 329px;
+			margin: 0px;
+			padding: 0px;
+			opacity: 0;
+		}
+
+		.buttons {
+			display: block;
+			width: 100%;
+			height: 23%;
+			margin-bottom: 5px;
+		}
+
+
+		/*---------------------------------page-1------------------------*/
+
+		.page_1 {
+			background-image: url(sources/images/sl_03/CaD3_2_1.png);
+		}
+
+		.page_1_price_100 {
+			top: 390px;
+			left: 158px;
+		}
+
+		.page_1_price_50 {
+			top: 390px;
+			left: 448px;
+		}	
+
+		.page_1_price_20 {
+			top: 390px;
+			left: 731px;
+		}
+
+		.page_1_sum_100 {
+			top: 534px;
+			left: 158px;
+		}	
+
+		.page_1_sum_50 {
+			top: 534px;
+			left: 448px;
+		}
+
+		.page_1_sum_20 {
+			top: 534px;
+			left: 731px;
+		}
+
+		.page_1_profit {
+			top: 605px;
+			left: 536px;		
+		}				
+
+		/*---------------------------------page-2------------------------*/
+
+		.page_2 {
+			background-image: url(sources/images/sl_03/CaD3_2_2.png);
+		}
+
+		input.page_2_price_100 {
+			top: 390px;
+			left: 158px;
+			width: 317px;
+		}
+
+		input.page_2_price_30 {
+			top: 390px;
+			left: 599px;
+			width: 317px;		
+		}	
+
+
+		span.page_2_sum_100 {
+			top: 534px;
+			left: 158px;
+			width: 337px;
+		}	
+
+		span.page_2_sum_30 {
+			top: 534px;
+			left: 599px;
+			width: 337px;	
+		}
+
+		span.page_2_profit {
+			top: 605px;
+			left: 536px;		
+		}	
+
+
+		/*---------------------------------page-3------------------------*/
+
+		.page_3 {
+			background-image: url(sources/images/sl_03/CaD3_2_3.png);
+		}
+
+		.page_3_price_120 {
+			top: 390px;
+			left: 158px;
+		}
+
+		.page_3_price_60 {
+			top: 390px;
+			left: 448px;
+		}	
+
+		.page_3_price_30 {
+			top: 390px;
+			left: 731px;
+		}
+
+		.page_3_sum_120 {
+			top: 534px;
+			left: 158px;
+		}	
+
+		.page_3_sum_60 {
+			top: 534px;
+			left: 448px;
+		}
+
+		.page_3_sum_30 {
+			top: 534px;
+			left: 731px;
+		}
+
+		.page_3_profit {
+			top: 605px;
+			left: 536px;		
+		}
+
+		/*---------------------------------page-4------------------------*/
+
+		.page_4 {
+			background-image: url(sources/images/sl_03/CaD3_2_4.png);
+		}
+
+		.container {
+			position: absolute;
+			top: 247px;
+			left: 295px;
+			width: 200px;
+			height: 200px;
+			perspective: 1000px;
+		}	
+
+		.cube {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transform-style: preserve-3d;
+			-webkit-transform: rotateX(-20deg) rotateY(-19deg);
+			-moz-transform: rotateX(-20deg) rotateY(-19deg);				
+			-o-transform: rotateX(-20deg) rotateY(-19deg);			
+			transform: rotateX(-20deg) rotateY(-30deg);
+			-webkit-transition: all 15s ease;
+			-moz-transform: all 15s ease;	
+			-o-transform: all 15s ease;
+			transition: all 15s ease; 
+			-webkit-backface-visibility: hidden;
+    	backface-visibility: hidden;
+		}
+
+		.container.active .cube {
+			-webkit-transform: rotateX(-20deg) rotateY(335deg);
+			-moz-transform: rotateX(-20deg) rotateY(335deg);				
+			-o-transform: rotateX(-20deg) rotateY(335deg);				 
+			transform: rotateX(-20deg) rotateY(335deg);	
+		}
+
+		.cube figure{
+			margin: 0;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			display: block;
+			position: absolute;
+			border: 0.5px solid #ccc;
+			background-color: #fff;
+/*			-webkit-box-shadow: inset 0px 0px 39px 0px rgba(204,204,204,0.76);
+			-moz-box-shadow: inset 0px 0px 39px 0px rgba(204,204,204,0.76);
+			box-shadow: inset 0px 0px 39px 0px rgba(204,204,204,0.76);*/
+		}
+
+		.cube .front  { 
+			-webkit-transform: rotateY(   0deg ) translateZ( 95.4px );	
+			transform: rotateY(   0deg ) translateZ( 95.4px );
+			width: 189px;
+			height: 352px; 
+			background-image: url(sources/images/sl_03/pack_2.png);
+		}
+		.cube .back   { 
+			-webkit-transform: rotateX( 180deg ) translateZ( 94.4px );	
+			transform: rotateX( 180deg ) translateZ( 94.4px );
+			width: 189px;
+			height: 352px;
+			background-image: url(sources/images/sl_03/pack_4.png);		
+		}
+		.cube .right  { 
+			-webkit-transform: rotateY(  90deg ) translateZ( 94.6px );	
+			transform: rotateY(  90deg ) translateZ( 94.6px );
+			width: 189px;
+			height: 352px;
+			background-image: url(sources/images/sl_03/pack_3.png);		
+		}
+		.cube .left   {
+			-webkit-transform: rotateY( -90deg ) translateZ( 94.6px );  
+			transform: rotateY( -90deg ) translateZ( 94.6px ); 
+			width: 189px;
+			height: 352px;
+			background-image: url(sources/images/sl_03/pack_5.png);			
+		}
+		.cube .top    { 
+			-webkit-transform: rotateX(  90deg ) translateZ( 95px );	
+			transform: rotateX(  90deg ) translateZ( 95px );
+			width: 189px;
+			height: 189px;	
+			background-image: url(sources/images/sl_03/pack_1.png);		
+		}
+		.cube .bottom { 
+			-webkit-transform: rotateX( -90deg ) translateZ( 258px );	
+			transform: rotateX( -90deg ) translateZ( 258px );
+			width: 189px;
+			height: 189px;
+			background-image: url(sources5/images/sl_03/Lyo_2.png);			
+		}
+
+		.cube .shadow { 
+			-webkit-transform: rotateX( -90deg ) translateZ( 287px );	
+			transform: rotateX( -90deg ) translateZ( 287px );
+			width: 189px;
+			height: 189px;
+			background: #eee;	
+			border:0px;	
+			-webkit-box-shadow: 0px 0px 15px 0px rgba(10, 10, 10, 0.14);
+			box-shadow:         0px 0px 15px 0px rgba(10, 10, 10, 0.14);	
+			-webkit-filter: blur(5px);
+			filter: blur(5px);
+		}
+
+
+	</style>
+</head>
+
+<body id="body" body="body" data-num="#slide3">
+	<div class="bg"></div>
+
+	<div id="page_1" class="pages page_1">
+		<input type="number" id="page_1_price_100" class="page_1_price_100" placeholder="0">
+		<input type="number" id="page_1_price_50" class="page_1_price_50" placeholder="0">
+		<input type="number" id="page_1_price_20" class="page_1_price_20" placeholder="0">
+
+		<span id="page_1_sum_100" class="price page_1_sum_100">0</span>
+		<span id="page_1_sum_50" class="price page_1_sum_50">0</span>
+		<span id="page_1_sum_20" class="price page_1_sum_20">0</span>
+		<span id="page_1_profit" class="page_1_profit">0</span>
+	</div>
+
+	<div id="page_2" class="pages page_2 hidden">
+
+		<input type="number" id="page_2_price_100" class="page_2_price_100" placeholder="0">
+		<input type="number" id="page_2_price_30" class="page_2_price_30" placeholder="0">
+
+		<span id="page_2_sum_100" class="price page_2_sum_100">0</span>
+		<span id="page_2_sum_30" class="price page_2_sum_30">0</span>
+		<span id="page_2_profit" class="page_2_profit">0</span>
+
+
+	</div>
+
+	<div id="page_3" class="pages page_3 hidden">
+
+		<input type="number" id="page_3_price_120" class="page_3_price_120" placeholder="0">
+		<input type="number" id="page_3_price_60" class="page_3_price_60" placeholder="0">
+		<input type="number" id="page_3_price_30" class="page_3_price_30" placeholder="0">
+
+		<span id="page_3_sum_120" class="price page_3_sum_120">0</span>
+		<span id="page_3_sum_60" class="price page_3_sum_60">0</span>
+		<span id="page_3_sum_30" class="price page_3_sum_30">0</span>
+		<span id="page_3_profit" class="page_3_profit">0</span>
+
+
+	</div>
+
+	<div id="page_4" class="pages page_4 hidden">
+
+		<section class="container">
+			<div id="cube" class="cube">
+				<figure class="front"></figure>
+				<figure class="back"></figure>
+				<figure class="right"></figure>
+				<figure class="left"></figure>
+				<figure class="top"></figure>
+				<figure class="bottom"></figure> 
+				<figure class="shadow"></figure> 	       
+			</div>
+		</section>
+
+	</div>	
+
+
+	<menu id="buttons_nav" class="buttons_nav">
+		<button class="buttons" data-nav="page_1"></button>
+		<button class="buttons" data-nav="page_2"></button>
+		<button class="buttons" data-nav="page_3"></button>
+		<button class="buttons" data-nav="page_4"></button>		
+	</menu>
+
+	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+	<a href="#slide7" id="btn_literature" class="btn_nav btn_literature"></a>	
+	<a href="#slide100" class="btn btn_logo"></a>
+
+	<button data-num="home" class="btn_nav btn_home"></button>
+	<button data-num="literature" class="btn_nav btn_literature"></button>	
+	
+	<script type='text/javascript'>
+		$(function(){
+			var flag = true;
+			$('#cube').on('mouseup touchend', rotationBox);
+
+			function rotationBox() {
+				if(flag == true) {
+					$('.container').addClass('active');
+					setTimeout(function(){flag = false}, 2500);
+				} else if(flag == false){
+					$('.container').removeClass('active');
+					setTimeout(function(){flag = true}, 2500);
+				}
+			};
+
+    	// function rotationBox() {
+    	// 	$(this).toggleClass('active');
+    	// }			
+			
+			var data_num = $('#body').data('num')
+			sessionStorage.setItem('num', data_num);
+
+			buttons_nav.addEventListener('click', navigation);
+			buttons_nav.addEventListener('touchend', navigation);
+			
+			var event = new Event("click");  
+			document.getElementById('buttons_nav').dispatchEvent(event);		
+
+			page_1_price_100.addEventListener('input', calc1);
+			page_1_price_50.addEventListener('input', calc1);
+			page_1_price_20.addEventListener('input', calc1);
+
+			page_2_price_100.addEventListener('input', calc2);
+			page_2_price_30.addEventListener('input', calc2);
+
+			page_3_price_120.addEventListener('input', calc3);
+			page_3_price_60.addEventListener('input', calc3);
+			page_3_price_30.addEventListener('input', calc3);
+
+
+			function calc1() {
+				var compair = pushValueExists(1, [100, 50, 20]);
+				page_1_profit.innerText = compairPrice(compair);
+			}
+
+
+			function calc2() {
+				var compair = pushValueExists(2, [100, 30]);
+				page_2_profit.innerText = compairPrice(compair);
+			}
+
+			function calc3() {
+				var compair = pushValueExists(3, [120, 60, 30]);
+				page_3_profit.innerText = compairPrice(compair);
+			}
+
+			/**
+			 * Запихиваем значения в массив
+			 */
+			 function pushValueExists(page_id, ids)
+			 {
+			 	var compair = [];
+			 	for (var i in ids)
+			 	{
+			 		var element = document.getElementById('page_'+page_id+'_price_'+ids[i]);
+			 		var sum = Math.round(element.value*1/ids[i]*120);
+			 		var element_sum = document.getElementById('page_'+page_id+'_sum_'+ids[i]);
+			 		element_sum.innerText = sum;
+			 		compair.push(sum);
+			 	}
+			 	return compair;
+			 }
+
+			/**
+			 * Сравниваем цены и возвращаем разницу минимальной и максимальной
+			 *
+			 * @param compair
+             * @returns {number}
+             */
+             function compairPrice(compair)
+             {
+             	var maxprice = 0;
+             	var minprice = 9999999999999999;
+             	var is_run = false;
+
+             	for (var i = 0; i < 3; i++)
+             	{
+             		if (compair[i] == 0)
+             			continue;
+
+             		is_run = true;
+             		if (maxprice < compair[i])
+             			maxprice = compair[i];
+             		if (minprice > compair[i])
+             			minprice = compair[i];
+             	}
+             	if (is_run)
+             		return maxprice-minprice;
+             	else
+             		return 0;
+             }
+
+             function navigation(e) {
+             	var page = "page_1";			
+             	if(e.target.dataset.nav) {
+             		page = document.getElementById(e.target.dataset.nav);
+             	} else if (sessionStorage.getItem('taste') !== null){
+             		page = document.getElementById(sessionStorage.getItem('taste'));
+             	} else if (sessionStorage.getItem('taste') == null){
+             		page = document.getElementById("page_1");
+             	};
+             	var pages = document.getElementsByClassName('pages');
+             	for(var i = 0; i < pages.length; i++) {
+             		pages[i].classList.add('hidden');
+             	};
+
+             	page.classList.remove('hidden');
+
+             }
+
+           });
+
+
+         </script>    
+       </body>
+       </html>

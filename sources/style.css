@@ -1,0 +1,200 @@
+	@font-face {
+		font-family: 'PT Sans Narrow';
+		src: url('fonts/PTSans-Narrow.eot');
+		src: url('fonts/PTSans-Narrow.eot?#iefix') format('embedded-opentype'),
+		url('fonts/PTSans-Narrow.woff') format('woff'),
+		url('fonts/PTSans-Narrow.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'PT Sans NarrowBold';
+		src: url('fonts/PTSans-NarrowBold.eot');
+		src: url('fonts/PTSans-NarrowBold.eot?#iefix') format('embedded-opentype'),
+			url('fonts/PTSans-NarrowBold.woff') format('woff'),
+			url('fonts/PTSans-NarrowBold.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+	}	
+
+	* {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+	.body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1024px;
+		height: 768px;
+		margin:0;
+		padding:0;
+	}
+
+	.hidden {
+		display:none;
+	}
+
+	.bg, .bg2, .bg3, .bg4, .bg_xim, .bg_xim_2, .bg_naz, .bg_naz_2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1024px;
+		height: 768px;
+		background-repeat: no-repeat;
+		background-image: url('images/bg.png');
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+
+	.bg2 {
+		background-image: url('../sources/images/bg2.png');		
+	} 
+
+	.bg3 {
+		background-image: url('../sources/images/bg3.png');		
+	}
+
+	.bg4 {
+		background-image: url('../sources/images/bg4.png');		
+	} 	 	
+
+	.bg_xim {
+		background-image: url('../sources02/images/bg_xym.png');			
+	}
+
+	.bg_xim_2 {
+		background-image: url('../sources02/images/bg_xym_2.png');			
+	}	
+
+	.bg_naz {
+		background-image: url('../sources3/images/bg_naz.png');			
+	}	
+
+	.bg_naz_2 {
+		background-image: url('../sources3/images/bg_naz_2.png');			
+	}		
+
+	.pages {
+		position: absolute;
+		top: 0;
+		height: 0;
+		width: 1024px;
+		height: 768px;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;  	
+	}
+
+
+
+
+
+	.btn {
+		position: absolute;
+		border:1px solid red;
+		opacity:0;
+		z-index:5000;
+	}
+
+	.btn_nav {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: 100%;	
+		border:0px;	
+		z-index:2;
+	}
+
+	.btn_home {
+		background-image: url('images/btn_back.png');			
+    width: 48px;
+    height: 38px;
+    left: 30px;
+    top: 704px;
+    opacity:0;
+	}
+
+	.btn_nav.active {
+		-webkit-filter: grayscale(1);		
+		filter: grayscale(1);
+		opacity:1;
+	}	
+
+	.btn_literature {
+		background-image: url('images/btn_book.png');			
+    width: 48px;
+    height: 38px;
+    left: 87px;
+    top: 704px;	
+    opacity:0;	
+	}
+
+	.btn_logo {
+		position: absolute;	
+    width: 94px;
+    height: 50px;
+    left: 901px;
+    top: 21px;
+    z-index:9900;			
+	}
+
+	.btn_back {
+    width: 32px;
+    height: 38px;
+    left: 966px;
+    top: 20px;		
+	}
+
+	.btn_back_2 {
+    width: 80px;
+    height: 80px;
+    left: 914px;
+    top: 99px;
+	}	
+
+
+
+	/*popup*/
+
+	.popups {
+		position: absolute;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width: 1024px;
+		height: 768px;
+		top:0px;
+		left: 0px;
+		opacity:0;
+		z-index:1;
+		-webkit-transition: all 1s ease;		
+		transition: all 1s ease;
+		-webkit-transform: scale(0.9, 0.9);
+		transform: scale(0.9, 0.9);		
+	}
+
+	.popups.active {
+		z-index:6000;
+		opacity:1;
+		-webkit-transform: scale(1, 1);
+		transform: scale(1, 1);					
+	}	
+
+	.close_popup {
+		position: absolute;
+		top: 0;	
+		right: 0;	
+		width: 200px;	
+		height: 200px;	
+		z-index:9000;	
+	}
+
+
+
+
+
+/*circle*/
+// .bg_slide-circle_1 {
+// 		background-image: url(images/slide_circle/XFCM_circle_1.png);	
+// }
+
