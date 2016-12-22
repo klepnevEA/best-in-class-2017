@@ -19,142 +19,117 @@
 		background-image: url(sources3/images/Naz_2/Naz_2_1.png);		
 	}
 
-	.btn {
-		-webkit-background-size: 100%;
-		background-size: 100%;
-		background-repeat: no-repeat;
-    width: 283px;
-    height: 416px;
-    top: 159px;		
-	}
-
-	.btn_1 {
-    left: 48px;
-	}
-
-	.btn_2 {
-    left: 369px;
-	}
-
-	.btn_3 {
-    left: 691px;
-	}	
-
-	.popup_1 {
-		background-image: url(sources3/images/Naz_2/Naz_2_5.png);		
-	}	
-
-	.popup_2 {
-		background-image: url(sources3/images/Naz_2/Naz_2_8.png);		
-	}	
-
-	.popup_3 {
-		background-image: url(sources3/images/Naz_2/Naz_2_9.png);		
-	}
-
-	.popup_1 div {
+	.button {
 		position: absolute;
 		-webkit-background-size: 100%;
 		background-size: 100%;
-		background-repeat: no-repeat;	
-		-webkit-transition: all .5s ease 2s;			
-		transition: all .5s ease 2s;	
+		background-repeat: no-repeat;
+		width: 362px;
+		height: 56px;
+		left: 30px;
+		opacity:0;	
 	}
 
-	.wrap {
-    top: 188px;
-    left: 756px;
-    width: 217px;
-    height: 188px;
+	.button.active,
+	.pros div.active {
+		opacity:1;
 	}
 
-	.bottle {
-		top: 0px;
-		left: 0;
+	.btn_1 {
+    top: 327px;
+		background-image: url(sources3/images/Naz_2/Naz_2_2.png);	    
+	}
+
+	.btn_2 {
+    top: 399px;
+		background-image: url(sources3/images/Naz_2/Naz_2_3.png);	
+	}
+
+	.btn_3 {
+    top: 473px;
+		background-image: url(sources3/images/Naz_2/Naz_2_4.png);	
+	}	
+
+	.btn_4 {
+    top: 545px;
+		background-image: url(sources3/images/Naz_2/Naz_2_5.png);	
+	}		
+
+	.btn_5 {
+    top: 618px;
+		background-image: url(sources3/images/Naz_2/Naz_2_6.png);	
+	}
+
+	.pros {
+		position: absolute;
+		top: 327px;
+		left: 419px;
+		width: 493px;
+		height: 338px;
+	}
+
+	.pros div {
 		width: 100%;
-		height: 100%;
-		background-image: url(sources3/images/Naz_2/Naz_2_6_2.png);			
-	}	
-
-	.cap {
-		top: 0px;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url(sources3/images/Naz_2/Naz_2_6_3.png);				
+		height: 20%;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		background-image: url(sources3/images/Naz_2/Naz_2_7.png);
+		opacity:0;
 	}
 
-	.drop {
-    top: 118px;
-    left: 8px;
-		width: 31px;
-		height: 52px;
-		background-image: url(sources3/images/Naz_2/Naz_2_7.png);	
-		-webkit-transform: scale(0, 0);
-		transform: scale(0, 0);			
+	.plus_2 {
+		background-position: 0 -64px;
 	}
 
-	.popup_1.active .cap{
-		top: -3px;
-		left: 5px;
+	.plus_3 {
+		background-position: 0 -133px;
+	}	
+
+	.plus_4 {
+		background-position: 0 -200px;
 	}
 
-	.popup_1.active .drop{
-		-webkit-transform: scale(1, 1);
-		transform: scale(1, 1);
-    top: 136px;			
+	.plus_5 {
+		background-position: 0 -268px;
 	}	
 
-	.close_popup {
-		z-index:100;
+	.btn_literature {
+    left: 30px;		
 	}	
-
-	.popup_1.active .close_popup {
-		z-index: 9990;
-	}			
 
   </style>	
 </head>
 
-<body id="body" class="body" data-num="#slide52">
-	<div class="bg_naz"></div>
-	<div class="bg_naz bg_sl_naz_3_01"></div>
+<body id="body" class="body" data-num="#slide32">
+	<div class="bg_naz_2"></div>
+	<div class="bg_naz_2 bg_sl_naz_3_01"></div>
 
 
-	<a href="#" class="btn btn_1 btn_popup" data-num="1" data-popup="popup_1"></a>
-	<a href="#" class="btn btn_2 btn_popup" data-num="2" data-popup="popup_2"></a>
-	<a href="#" class="btn btn_3 btn_popup" data-num="3" data-popup="popup_3"></a>
-
-	<div id="popup_1" class="popups popup_1">
-		<a href="#" class="close_popup" data-popup="popup_1"></a>
-		<div class="wrap">
-			<div class="bottle"></div>
-			<div class="cap"></div>	
-			<div class="drop"></div>
-		</div>	
-
-	</div>
-
-	<div id="popup_2" class="popups popup_2">
-		<a href="#" class="close_popup" data-popup="popup_2"></a>
-	</div>
-
-	<div id="popup_3" class="popups popup_3">
-		<a href="#" class="close_popup" data-popup="popup_3"></a>
-	</div>	
-
-	<a id="btn_1" href="#"></a> 
-	<a id="btn_2" href="#"></a> 
-	<a id="btn_3" href="#"></a> 	
-	
-	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
-	<a href="#slide56" id="btn_literature" class="btn_nav btn_literature"></a>
+	<a href="#" class="button btn_1 btn_popup" data-num="1" ></a>
+	<a href="#" class="button btn_2 btn_popup" data-num="2" ></a>
+	<a href="#" class="button btn_3 btn_popup" data-num="3" ></a>
+	<a href="#" class="button btn_4 btn_popup" data-num="4" ></a>
+	<a href="#" class="button btn_5 btn_popup" data-num="5" ></a>	
 
 	
-	<button data-num="home" class="btn_nav btn_home"></button>
+	<div class="pros">
+		<div class="plus_1"></div>
+		<div class="plus_2"></div>
+		<div class="plus_3"></div>
+		<div class="plus_4"></div>
+		<div class="plus_5"></div>
+	</div>
+ 	
+	
+<!-- 	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a> -->
+	<a href="#slide38" id="btn_literature" class="btn_nav btn_literature"></a>
+
+	
+<!-- 	<button data-num="home" class="btn_nav btn_home"></button> -->
 	<button data-num="literature" class="btn_nav btn_literature"></button>
 
-	<a href="#slide100" class="btn_logo"></a>
+	<a href="#slide100" class="btn btn_logo"></a>
 
 
 <script type='text/javascript'>
@@ -163,7 +138,11 @@
       var data_num = $('#body').data('num');
       sessionStorage.setItem('num', data_num);
       
-  
+      $('.button').on('click touchend', function() {
+      	var num = $(this).data('num');
+      	$('.btn_' + num).addClass('active');
+      	$('.plus_' + num).addClass('active');
+      })
     });
 
   

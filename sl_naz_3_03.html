@@ -16,58 +16,51 @@
 
   <style>
 	.bg_sl_naz_3_01 {
-		background-image: url(sources3/images/Naz_3/Naz_3_1.png);		
+		background-image: url(sources3/images/Naz_3/Naz_3.png);		
 	}
-			
-	.clock {
-		position: absolute;
+
+	.btn_1, .btn_2, .btn_3 {
 		-webkit-background-size: 100%;
 		background-size: 100%;
-		background-repeat: no-repeat;	
-		top: 442px;
-		width: 124px;
-		height: 125px;
-		opacity:0;
+		background-repeat: no-repeat;
+		width: 92px;
+		height: 92px;
+		background-image: url(sources3/images/Naz_1/Naz_butt_1.png);
+		top: 573px;					
 	}
 
-	.clock_1 {
-		left: 158px;
-		background-image: url(sources3/images/Naz_3/Naz_3_2.png);	
-		-webkit-transition: all 1s ease 1s;			
-		transition: all 1s ease 1s;				
+	.btn_1 {
+    left: 255px;
 	}
 
-	.clock_2 {
-		left: 449px;
-		background-image: url(sources3/images/Naz_3/Naz_3_3.png);	
-		-webkit-transition: all 1s ease 2s;			
-		transition: all 1s ease 2s;					
+	.btn_2 {
+    left: 569px;
+	}
+
+	.btn_3 {
+    left: 882px;
 	}	
 
-	.clock_3 {
-		left: 740px;
-		background-image: url(sources3/images/Naz_3/Naz_3_4.png);	
-		-webkit-transition: all 1s ease 3s;			
-		transition: all 1s ease 3s;					
-	}
-
-	.body.active .clock{
-		opacity:1;		
-	}
 
   </style>	
 </head>
 
-<body id="body" class="body" data-num="#slide53">
+<body id="body" class="body" data-num="#slide33">
 	<div class="bg_naz"></div>
 	<div class="bg_naz bg_sl_naz_3_01"></div>
 
-	<div class="clock clock_1"></div>
-	<div class="clock clock_2"></div>
-	<div class="clock clock_3"></div>
 
+	<a href="#" class="btn_nav btn_1" data-num="1"></a>
+	<a href="#" class="btn_nav btn_2" data-num="2"></a>
+	<a href="#" class="btn_nav btn_3" data-num="3"></a>
+
+
+	<a id="btn_1" href="#slide34"></a> 
+	<a id="btn_2" href="#slide35"></a> 
+	<a id="btn_3" href="#slide36"></a> 	
+	
 	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
-	<a href="#slide56" id="btn_literature" class="btn_nav btn_literature"></a>
+	<a href="#slide38" id="btn_literature" class="btn_nav btn_literature"></a>
 
 	
 	<button data-num="home" class="btn_nav btn_home"></button>
@@ -82,7 +75,7 @@
       var data_num = $('#body').data('num');
       sessionStorage.setItem('num', data_num);
       
-  		$('#body').addClass('active');
+  
     });
 
   

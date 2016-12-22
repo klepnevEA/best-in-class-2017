@@ -36,7 +36,7 @@
 		display:none;
 	}
 
-	.bg, .bg2, .bg3, .bg4, .bg_xim, .bg_xim_2, .bg_naz, .bg_naz_2 {
+	.bg, .bg2, .bg3, .bg4, .bg_xim, .bg_xim_2, .bg_naz, .bg_naz_2, .bg_naz_3 {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -69,12 +69,16 @@
 	}	
 
 	.bg_naz {
-		background-image: url('../sources3/images/bg_naz.png');			
+		background-image: url('../sources3/images/Nazivin_back.png');			
 	}	
 
 	.bg_naz_2 {
-		background-image: url('../sources3/images/bg_naz_2.png');			
+		background-image: url('../sources3/images/Nazivin_back_2.png');			
 	}		
+
+	.bg_naz_3 {
+		background-image: url('../sources3/images/Nazivin_back_3.png');			
+	}	
 
 	.pages {
 		position: absolute;
@@ -104,6 +108,13 @@
 		background-size: 100%;	
 		border:0px;	
 		z-index:2;
+	}
+
+	.btn_popup  {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		z-index:5000;					
 	}
 
 	.btn_home {

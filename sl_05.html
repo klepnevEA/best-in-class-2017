@@ -114,7 +114,7 @@
       }
       100% {     
         transform: translate3d(0, 0, 0) rotate(0deg);
-      }      
+      }     
     } 
 
 
@@ -150,134 +150,110 @@
 
     .my-loupe img{
       position: absolute;
-      width: 1024px;
-      top: -322px;
-      left: -276px;
+      width: 535px;
+      top: -30px;
+      left: -70px;
       transform: scale(2, 2);
     }
 
     .wrapper.active .my-loupe {
-      -webkit-animation: loupeGo 5s backwards; 
-      animation:         loupeGo 5s backwards; 
-      -webkit-animation-delay: 5s;
-      animation-delay: 5s;
+      -webkit-animation: loupeGo 4s backwards; 
+      animation:         loupeGo 4s backwards; 
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
     }
 
     @keyframes loupeGo {
       0%   {     
-        left: 383px;
-        top: 369px;
+        transform: translate3d(0, 0, 0);
         opacity: 0;
       }
-      20% {  
-        left: 383px;
-        top: 369px;       
+      10% {  
+        transform: translate3d(0, 0, 0);       
         opacity:1;        
       }
       60% {     
-        left: 569px;
-        top: 381px; 
+        transform: translate3d(170px, 20px, 0);
       } 
-      80% {     
-        left: 569px;
-        top: 381px; 
+      90% {     
+        transform: translate3d(170px, 20px, 0);
         opacity:1;        
       }
       100% {
-        left: 569px;
-        top: 381px;          
+        transform: translate3d(170px, 20px, 0);          
         opacity:0;
-      }  
+      }   
     }    
 
     @-webkit-keyframes loupeGo {
       0%   {     
-        left: 383px;
-        top: 369px;
+        transform: translate3d(0, 0, 0);
         opacity: 0;
       }
-      20% {  
-        left: 383px;
-        top: 369px;       
+      10% {  
+        transform: translate3d(0, 0, 0);       
         opacity:1;        
       }
       60% {     
-        left: 569px;
-        top: 381px; 
+        transform: translate3d(170px, 20px, 0);
       } 
-      80% {     
-        left: 569px;
-        top: 381px; 
+      90% {     
+        transform: translate3d(170px, 20px, 0);
         opacity:1;        
       }
       100% {
-        left: 569px;
-        top: 381px;          
+        transform: translate3d(170px, 20px, 0);          
         opacity:0;
       } 
     }
 
 
     .wrapper.active .my-loupe img {
-      -webkit-animation: imgGo 5s backwards; 
-      animation:         imgGo 5s backwards; 
-      -webkit-animation-delay: 5s;
-      animation-delay: 5s;
+      -webkit-animation: imgGo 4s backwards; 
+      animation:         imgGo 4s backwards; 
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
 
     }
 
     @keyframes imgGo {
       0%   {     
-        top: -322px;
-        left: -276px;
-        opacity: 0;
+        transform: translate3d(0, 0, 0)  scale(2, 2);
       }
-      20% {  
-        top: -322px;
-        left: -276px;        
-        opacity:1;        
+      10% {  
+        transform: translate3d(0, 0, 0)  scale(2, 2);       
+    
       }
       60% {     
-        top: -339px;
-        left: -630px;
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);
       } 
-      80% {     
-        top: -339px;
-        left: -630px;
-        opacity:1;        
+      90% {     
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);
+      
       }
       100% {
-        top: -339px;
-        left: -630px;        
-        opacity:0;
-      } 
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);          
+      }  
     }    
 
     @-webkit-keyframes imgGo {
       0%   {     
-        top: -322px;
-        left: -276px;
-        opacity: 0;
+        transform: translate3d(0, 0, 0)  scale(2, 2);
       }
-      20% {  
-        top: -322px;
-        left: -276px;        
-        opacity:1;        
+      10% {  
+        transform: translate3d(0, 0, 0)  scale(2, 2);       
+    
       }
       60% {     
-        top: -339px;
-        left: -630px;
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);
       } 
-      80% {     
-        top: -339px;
-        left: -630px;
-        opacity:1;        
+      90% {     
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);
+      
       }
       100% {
-        top: -339px;
-        left: -630px;        
-        opacity:0;
-      } 
+        transform: translate3d(-380px, -35px, 0)  scale(2, 2);          
+      }  
     } 
 
 
@@ -354,18 +330,18 @@
 
     .box {
       position: absolute;
-      bottom: 123px;
+      top: 303px;
       left: 251px;
       width: 535px;
       background-repeat: no-repeat;
       -webkit-background-size: 100%;
       background-size: 100%;
-      background-position: 0 bottom;
+      background-position: 0 0;
       overflow: hidden;
     }
 
     .box_2 {
-      height: 340px;
+      height: 0px;
       -webkit-transition: all 4s ease 3s;
       transition: all 4s ease 3s; 
       opacity: 1;                 
@@ -377,32 +353,31 @@
     }  
 
     .wrapper.active .box_2 {
-      opacity: 0;
-      height: 0px; 
+      height: 340px; 
     }
 
     .wrapper_1 .box_2 {
-      background-image: url('./sources/images/sl_05/CaD3_4_3.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_4.png')      
     }
 
     .wrapper_1 .box_1 {
-      background-image: url('./sources/images/sl_05/CaD3_4_4.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_3.png')      
     }  
 
     .wrapper_2 .box_2 {
-      background-image: url('./sources/images/sl_05/CaD3_4_8.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_9.png')      
     }
 
     .wrapper_2 .box_1 {
-      background-image: url('./sources/images/sl_05/CaD3_4_9.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_8.png')      
     } 
 
     .wrapper_3 .box_2 {
-      background-image: url('./sources/images/sl_05/CaD3_4_13.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_14.png')      
     }
 
     .wrapper_3 .box_1 {
-      background-image: url('./sources/images/sl_05/CaD3_4_14.png')      
+      background-image: url('./sources/images/sl_05/CaD3_4_13.png')      
     }
 
     .stamp {
@@ -427,17 +402,17 @@
     }
 
     .wrapper.active .stamp_1 {
-      -webkit-animation: stamp_Go 5s backwards; 
-      animation:         stamp_Go 5s backwards; 
-      -webkit-animation-delay: 5s;
-      animation-delay: 5s;
+      -webkit-animation: stamp_Go 5s forwards; 
+      animation:         stamp_Go 5s forwards; 
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
     } 
 
     .wrapper.active .stamp_2 {
-      -webkit-animation: stamp_Go 5s backwards; 
-      animation:         stamp_Go 5s backwards; 
-      -webkit-animation-delay: 6s;
-      animation-delay: 6s;
+      -webkit-animation: stamp_Go 5s forwards; 
+      animation:         stamp_Go 5s forwards; 
+      -webkit-animation-delay: 8s;
+      animation-delay: 8s;
     }     
 
 
@@ -449,11 +424,8 @@
    
         opacity:1;        
       }
-      60% {     
-        opacity:1;        
-      }
       100% {
-        opacity:0;
+        opacity:1;
       }  
     }    
 
@@ -492,7 +464,7 @@
   <div class="wrapper wrapper_1" id="wrapper_1">
     <div class="brush"></div>
     <div class="my-loupe my-loupe_wrapper_1">
-      <img src="./sources/images/sl_05/CaD3_4_4_loop.png" alt="">
+      <img src="./sources/images/sl_05/CaD3_4_4.png" alt="">
     </div>
     <div class="box box_1"></div>
     <div class="box box_2"></div>
@@ -504,7 +476,7 @@
   <div class="wrapper wrapper_2" id="wrapper_2">
     <div class="brush"></div> 
     <div class="my-loupe my-loupe_wrapper_2">
-      <img src="./sources/images/sl_05/CaD3_4_9_loop.png" alt="">
+      <img src="./sources/images/sl_05/CaD3_4_9.png" alt="">
     </div>
     <div class="box box_1"></div>
     <div class="box box_2"></div> 
@@ -516,7 +488,7 @@
   <div class="wrapper wrapper_3" id="wrapper_3">
     <div class="brush"></div> 
     <div class="my-loupe my-loupe_wrapper_3">
-      <img src="./sources/images/sl_05/CaD3_4_14_loop.png" alt="">
+      <img src="./sources/images/sl_05/CaD3_4_14.png" alt="">
     </div>
     <div class="box box_1"></div>
     <div class="box box_2"></div>
@@ -553,15 +525,11 @@
         buttons = $('.buttons').find('a'),
         wrapper = $('.wrapper'),
         this_wrapper = $(btn).data('wrapper');
-        // this_src_img = $(btn).data('src-img'),
-        // bridge = $(btn).data('bridge');
 
         $(buttons).removeClass('active');
         $(btn).addClass('active');
         wrapper.removeClass('active');
         $('#' + this_wrapper).addClass('active');
-        // console.log(bridge);
-
 
       });
 

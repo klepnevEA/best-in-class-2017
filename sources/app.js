@@ -13,12 +13,14 @@
 		});
 
 
-		function popopOpen() {
+		function popopOpen(e) {
+			e.preventDefault();
 			var popup = $(this).data('popup');
 			$('#' + popup).addClass('active');
 		}
 
-		function popopClose() {
+		function popopClose(e) {
+			e.preventDefault();
 			var popup = $(this).data('popup');
 			setTimeout(function() {$('#' + popup).removeClass('active')}, 300);
 			$('.data_nav').removeClass('active');			
@@ -31,7 +33,6 @@
 		function colorLinck(e) {
 			if(e.target.dataset.num) {
 				var page = e.target.dataset.num;
-				console.log(page);
 
 				if(e.target.dataset.num) {
 					$('.btn_nav').removeClass('active');

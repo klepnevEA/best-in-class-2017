@@ -15,9 +15,24 @@
   <script type="text/javascript" src="sources/app.js"></script> 
 
   <style>
-	.bg_sl_naz_3_01 {
-		background-image: url(sources3/images/Naz_1/Naz_1.png);		
+	.bg_naz_slide_00 {
+		background-image: url(sources3/images/Naz_1/Naz_1_1.png);		
 	}
+
+
+	.btn_info {
+    position: absolute;
+    background-image: url(sources3/images/i_on.png);
+    width: 50px;
+    height: 40px;
+    left: 143px;
+    top: 703px;
+    opacity: 0;
+	}
+
+	.btn_info.active {
+    opacity: 1;
+	}	
 
 	.btn_1, .btn_2, .btn_3 {
 		-webkit-background-size: 100%;
@@ -26,7 +41,7 @@
 		width: 92px;
 		height: 92px;
 		background-image: url(sources3/images/Naz_1/Naz_butt_1.png);
-		top: 573px;					
+		top: 460px;					
 	}
 
 	.btn_1 {
@@ -39,32 +54,70 @@
 
 	.btn_3 {
     left: 882px;
+	}
+
+	.popup_1 {
+		background-image: url(sources3/images/Naz_1/Naz_1_2.png);
+		transition:0s;		
 	}	
 
+	.popup_2 {
+		background-image: url(sources3/images/Naz_1/Naz_1_3.png);
+		transition:0s;		
+	}
 
+	.popup_3 {
+		background-image: url(sources3/images/Naz_1/Naz_1_4.png);
+		transition:0s;		
+	}
+
+	.popup_info {
+		background-image: url(sources3/images/Naz_1/Naz_1_5.png);
+	
+	}	
+
+	.close_popup {
+		top: 130px;
+		left: 100px;
+		width: 900px;
+		height: 100px;
+	}	
   </style>	
 </head>
 
-<body id="body" class="body" data-num="#slide51">
-	<div class="bg_naz"></div>
-	<div class="bg_naz bg_sl_naz_3_01"></div>
+<body id="body" class="body" data-num="#slide31">
+	<div class="bg_naz_3"></div>
+	<div class="bg bg_naz_slide_00"></div>
 
 
-	<a href="#" class="btn_nav btn_1" data-num="1"></a>
-	<a href="#" class="btn_nav btn_2" data-num="2"></a>
-	<a href="#" class="btn_nav btn_3" data-num="3"></a>
+	<a href="#" class=" btn_1 btn_popup" data-num="1" data-popup="popup_1"></a>
+	<a href="#" class=" btn_2 btn_popup" data-num="2" data-popup="popup_2"></a>
+	<a href="#" class=" btn_3 btn_popup" data-num="3" data-popup="popup_3"></a>
+	<a href="#" class=" btn_popup btn_info" data-num="info" data-popup="popup_info"></a>
+	<div id="popup_1" class="popups popup_1">
+		<a href="#" class="close_popup" data-popup="popup_1"></a>
+	</div>
 
+	<div id="popup_2" class="popups popup_2">
+		<a href="#" class="close_popup" data-popup="popup_2"></a>
+	</div>
 
-	<a id="btn_1" href="#slide52"></a> 
-	<a id="btn_2" href="#slide53"></a> 
-	<a id="btn_3" href="#slide54"></a> 	
+	<div id="popup_3" class="popups popup_3">
+		<a href="#" class="close_popup" data-popup="popup_3"></a>
+	</div>
+
+	<div id="popup_info" class="popups popup_info">
+		<a href="#" class="close_popup" data-popup="popup_info"></a>
+	</div>		
+
 	
 	<a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
-	<a href="#slide56" id="btn_literature" class="btn_nav btn_literature"></a>
+	<a href="#slide38" id="btn_literature" class="btn_nav btn_literature"></a>
 
 	
 	<button data-num="home" class="btn_nav btn_home"></button>
 	<button data-num="literature" class="btn_nav btn_literature"></button>
+
 
 	<a href="#slide100" class="btn btn_logo"></a>
 
@@ -75,6 +128,10 @@
       var data_num = $('#body').data('num');
       sessionStorage.setItem('num', data_num);
       
+
+      $('.close_popup').on('click', function(){
+      	$('.btn_info').removeClass('active');
+      })
   
     });
 

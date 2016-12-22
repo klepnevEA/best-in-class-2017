@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+
+  <title>Document</title>
+  <link href="sources/style.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script> 
+  <script type="text/javascript" src="sources/app.js"></script>    
+  <style>
+    .bg_title {
+      background-image: url('./sources/images/sl_05/CaD3_4_1.png');     
+    }
+
+    .brush{
+      position: absolute;
+      background-image: url('./sources/images/sl_04/brush.png'); 
+      -webkit-background-size: 100%;
+      background-size: 100%; 
+      background-repeat: no-repeat;
+      width: 33px;
+      height: 218px;
+      top: 401px;
+      left: 935px;
+      z-index:200; 
+    }
+
+    .wrapper.active .brush{
+      -webkit-animation: brushGo 5s backwards; 
+      animation:         brushGo 5s backwards; 
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+
+    @keyframes brushGo {
+      0%   {     
+        transform: translate3d(0, 0, 0);
+      }
+      20% {     
+        transform: translate3d(-650px, -200px, 0) rotate(-135deg);
+      }
+      26% {     
+        transform: translate3d(-120px, -175px, 0) rotate(-135deg);
+
+      } 
+      32% {     
+        transform: translate3d(-650px, -150px, 0) rotate(-135deg);
+
+      } 
+      38% {     
+        transform: translate3d(-120px, -125px, 0) rotate(-135deg);
+
+      }
+      44% {     
+        transform: translate3d(-650px, -100px, 0) rotate(-135deg);
+
+      } 
+      50% {     
+        transform: translate3d(-120px, -75px, 0) rotate(-135deg);
+
+      }
+      56% {     
+        transform: translate3d(-620px, -50px, 0) rotate(-135deg);
+
+      }
+      62% {     
+        transform: translate3d(-120px, -25px, 0) rotate(-135deg);
+
+      }
+      80% {     
+        transform: translate3d(-650px, 0, 0) rotate(-135deg);
+      }
+      100% {     
+        transform: translate3d(0, 0, 0) rotate(0deg);
+      }      
+    }
+
+    @-webkit-keyframes brushGo {
+      0%   {     
+        transform: translate3d(0, 0, 0);
+      }
+      20% {     
+        transform: translate3d(-650px, -200px, 0) rotate(-135deg);
+      }
+      26% {     
+        transform: translate3d(-120px, -175px, 0) rotate(-135deg);
+
+      } 
+      32% {     
+        transform: translate3d(-650px, -150px, 0) rotate(-135deg);
+
+      } 
+      38% {     
+        transform: translate3d(-120px, -125px, 0) rotate(-135deg);
+
+      }
+      44% {     
+        transform: translate3d(-650px, -100px, 0) rotate(-135deg);
+
+      } 
+      50% {     
+        transform: translate3d(-120px, -75px, 0) rotate(-135deg);
+
+      }
+      56% {     
+        transform: translate3d(-620px, -50px, 0) rotate(-135deg);
+
+      }
+      62% {     
+        transform: translate3d(-120px, -25px, 0) rotate(-135deg);
+
+      }
+      80% {     
+        transform: translate3d(-650px, 0, 0) rotate(-135deg);
+      }
+      100% {     
+        transform: translate3d(0, 0, 0) rotate(0deg);
+      }      
+    } 
+
+
+
+    .btn_sl_4 {
+      position: absolute;
+      width: 48px;
+      height: 40px;
+      top: 198px;
+      left: 943px;
+      background-image: url('./sources/images/sl_04/i.png');
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index:2000;
+    }
+
+    .my-loupe {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border:3px solid #ccc;
+      border-radius: 50% ;
+      z-index:100;
+      left: 383px;
+      top: 369px;
+      overflow: hidden;
+      opacity:0;
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+      border:5px solid rgba(0, 0, 0, 0);  
+    }
+
+    .my-loupe img{
+      position: absolute;
+      width: 1024px;
+      top: -322px;
+      left: -276px;
+      transform: scale(2, 2);
+    }
+
+    .wrapper.active .my-loupe {
+      -webkit-animation: loupeGo 5s backwards; 
+      animation:         loupeGo 5s backwards; 
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    @keyframes loupeGo {
+      0%   {     
+        left: 383px;
+        top: 369px;
+        opacity: 0;
+      }
+      20% {  
+        left: 383px;
+        top: 369px;       
+        opacity:1;        
+      }
+      60% {     
+        left: 569px;
+        top: 381px; 
+      } 
+      80% {     
+        left: 569px;
+        top: 381px; 
+        opacity:1;        
+      }
+      100% {
+        left: 569px;
+        top: 381px;          
+        opacity:0;
+      }  
+    }    
+
+    @-webkit-keyframes loupeGo {
+      0%   {     
+        left: 383px;
+        top: 369px;
+        opacity: 0;
+      }
+      20% {  
+        left: 383px;
+        top: 369px;       
+        opacity:1;        
+      }
+      60% {     
+        left: 569px;
+        top: 381px; 
+      } 
+      80% {     
+        left: 569px;
+        top: 381px; 
+        opacity:1;        
+      }
+      100% {
+        left: 569px;
+        top: 381px;          
+        opacity:0;
+      } 
+    }
+
+
+    .wrapper.active .my-loupe img {
+      -webkit-animation: imgGo 5s backwards; 
+      animation:         imgGo 5s backwards; 
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+
+    }
+
+    @keyframes imgGo {
+      0%   {     
+        top: -322px;
+        left: -276px;
+        opacity: 0;
+      }
+      20% {  
+        top: -322px;
+        left: -276px;        
+        opacity:1;        
+      }
+      60% {     
+        top: -339px;
+        left: -630px;
+      } 
+      80% {     
+        top: -339px;
+        left: -630px;
+        opacity:1;        
+      }
+      100% {
+        top: -339px;
+        left: -630px;        
+        opacity:0;
+      } 
+    }    
+
+    @-webkit-keyframes imgGo {
+      0%   {     
+        top: -322px;
+        left: -276px;
+        opacity: 0;
+      }
+      20% {  
+        top: -322px;
+        left: -276px;        
+        opacity:1;        
+      }
+      60% {     
+        top: -339px;
+        left: -630px;
+      } 
+      80% {     
+        top: -339px;
+        left: -630px;
+        opacity:1;        
+      }
+      100% {
+        top: -339px;
+        left: -630px;        
+        opacity:0;
+      } 
+    } 
+
+
+    .buttons {
+      position: absolute;
+      top: 350px;
+      left: 34px;
+      width: 109px;
+      height: auto;
+      z-index:3000;
+    }
+
+    .buttons a {
+      position: relative; 
+      display: block;
+      width: 100%;
+      height: 85px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100px $;
+      background-size: 100%;
+      background-position: 0 0;
+      margin:0;
+      padding: 0;
+      filter: contrast(80%);
+    }
+
+    .buttons a:after {
+      content: '';
+      position: absolute; 
+      top: 34px;
+      left: -35px;  
+      border:10px solid transparent;
+      border-left:20px solid #F29217;
+      opacity:0;
+
+    }
+
+    .buttons a.active {
+      filter: contrast(100%);      
+    }
+
+    .buttons a.active:after {
+      opacity:1;
+    } 
+
+    .btn_1 {
+      background-image: url('./sources/images/sl_05/btn_1.png')
+    } 
+    .btn_2 {
+      background-image: url('./sources/images/sl_05/btn_2.png')
+    } 
+
+    .btn_3 {
+      background-image: url('./sources/images/sl_05/btn_3.png')
+    } 
+
+    .hidden {
+      display: none;  
+    }
+
+    .wrapper {
+      opacity:0;
+      overflow: hidden;
+      position: absolute; 
+      top: 0; 
+      left: 0;
+      width: 1024px;  
+      height: 768px;    
+    } 
+
+    .wrapper.active {
+      opacity:1;      
+    } 
+
+    .box {
+      position: absolute;
+      bottom: 123px;
+      left: 251px;
+      width: 535px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100%;
+      background-size: 100%;
+      background-position: 0 bottom;
+      overflow: hidden;
+    }
+
+    .box_2 {
+      height: 340px;
+      -webkit-transition: all 4s ease 3s;
+      transition: all 4s ease 3s; 
+      opacity: 1;                 
+    }
+
+    .box_1 {
+      height: 340px; 
+
+    }  
+
+    .wrapper.active .box_2 {
+      opacity: 0;
+      height: 0px; 
+    }
+
+    .wrapper_1 .box_2 {
+      background-image: url('./sources/images/sl_05/CaD3_4_3.png')      
+    }
+
+    .wrapper_1 .box_1 {
+      background-image: url('./sources/images/sl_05/CaD3_4_4.png')      
+    }  
+
+    .wrapper_2 .box_2 {
+      background-image: url('./sources/images/sl_05/CaD3_4_8.png')      
+    }
+
+    .wrapper_2 .box_1 {
+      background-image: url('./sources/images/sl_05/CaD3_4_9.png')      
+    } 
+
+    .wrapper_3 .box_2 {
+      background-image: url('./sources/images/sl_05/CaD3_4_13.png')      
+    }
+
+    .wrapper_3 .box_1 {
+      background-image: url('./sources/images/sl_05/CaD3_4_14.png')      
+    }
+
+    .stamp {
+      position: absolute; 
+      width: 194px; 
+      height: 81px; 
+      background-repeat: no-repeat; 
+      -webkit-background-size:  403px;
+      background-size: 403px;
+      background-image: url('./sources/images/sl_05/sprite.png') ;
+      opacity:0;  
+    }
+
+    .stamp_1 {
+        top: 233px;
+        left: 369px; 
+    } 
+
+     .stamp_2 {
+        top: 263px;
+        left: 564px; 
+    }
+
+    .wrapper.active .stamp_1 {
+      -webkit-animation: stamp_Go 5s backwards; 
+      animation:         stamp_Go 5s backwards; 
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    } 
+
+    .wrapper.active .stamp_2 {
+      -webkit-animation: stamp_Go 5s backwards; 
+      animation:         stamp_Go 5s backwards; 
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s;
+    }     
+
+
+    @keyframes stamp_Go {
+      0%   {     
+        opacity: 0;
+      }
+      40% {  
+   
+        opacity:1;        
+      }
+      60% {     
+        opacity:1;        
+      }
+      100% {
+        opacity:0;
+      }  
+    }    
+
+    .wrapper_1 .stamp_1 {
+     background-position: 0 0;
+    }
+
+    .wrapper_1 .stamp_2 {
+     background-position: -209px 0;     
+    } 
+
+    .wrapper_2 .stamp_1 {
+     background-position: 0 -120px;
+    }
+
+    .wrapper_2 .stamp_2 {
+     background-position: -209px -120px;     
+    }
+
+    .wrapper_3 .stamp_1 {
+     background-position: 0 -258px;
+    }
+
+    .wrapper_3 .stamp_2 {
+     background-position: -209px -258px;     
+    }                               
+
+  </style>
+</head>
+
+<body id="body" body="body"  data-num="#slide5">
+  <div class="bg"></div>
+  <div class="bg bg_title"></div>
+  <a href="sources/pdf/Info_letter.pdf" class="btn_sl_4"></a>
+
+  <div class="wrapper wrapper_1" id="wrapper_1">
+    <div class="brush"></div>
+    <div class="my-loupe my-loupe_wrapper_1">
+      <img src="./sources/images/sl_05/CaD3_4_4_loop.png" alt="">
+    </div>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+
+    <div class="stamp stamp_1"> </div> 
+    <div class="stamp stamp_2"> </div> 
+  </div>
+
+  <div class="wrapper wrapper_2" id="wrapper_2">
+    <div class="brush"></div> 
+    <div class="my-loupe my-loupe_wrapper_2">
+      <img src="./sources/images/sl_05/CaD3_4_9_loop.png" alt="">
+    </div>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div> 
+   
+    <div class="stamp stamp_1"> </div> 
+    <div class="stamp stamp_2"> </div> 
+  </div> 
+
+  <div class="wrapper wrapper_3" id="wrapper_3">
+    <div class="brush"></div> 
+    <div class="my-loupe my-loupe_wrapper_3">
+      <img src="./sources/images/sl_05/CaD3_4_14_loop.png" alt="">
+    </div>
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+
+    <div class="stamp stamp_1"> </div> 
+    <div class="stamp stamp_2"> </div>          
+
+  </div>    
+
+  <div class="buttons">
+    <a href="" class="btn_1 active" data-wrapper='wrapper_1'></a>
+    <a href="" class="btn_2" data-wrapper='wrapper_2'></a>
+    <a href="" class="btn_3" data-wrapper='wrapper_3'></a>
+  </div>
+
+  <a href="#slide1" id="btn_home" class="btn_nav btn_home"></a>
+  <a href="#slide10" id="btn_literature" class="btn_nav btn_literature"></a> 
+  <a href="#slide100" class="btn btn_logo"></a>
+
+  <button data-num="home" class="btn_nav btn_home"></button>
+  <button data-num="literature" class="btn_nav btn_literature"></button>    
+
+  <script type='text/javascript'>
+    $(function(){
+
+      var data_num = $('#body').data('num')
+      sessionStorage.setItem('num', data_num);
+            
+      $('#wrapper_1').addClass('active');
+
+      $('.buttons').on('click', function (e){
+        e.preventDefault();
+        var btn = e.target,
+        buttons = $('.buttons').find('a'),
+        wrapper = $('.wrapper'),
+        this_wrapper = $(btn).data('wrapper');
+
+        $(buttons).removeClass('active');
+        $(btn).addClass('active');
+        wrapper.removeClass('active');
+        $('#' + this_wrapper).addClass('active');
+
+      });
+
+      
+
+
+    });
+
+
+  </script>    
+</body>
+</html>

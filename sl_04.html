@@ -51,8 +51,8 @@
       height: 83px;
       top: 237px;
       background-image: url('./sources/images/sl_04/CaD3_3_5.png');
-      -webkit-transition: opacity 1s ease 5s;
-      transition: opacity 1s ease 5s;     
+      -webkit-transition: opacity 1s ease 6s;
+      transition: opacity 1s ease 6s;     
     }
     
     .text_2 {
@@ -60,8 +60,8 @@
       height: 120px;
       top: 300px;
       background-image: url('./sources/images/sl_04/CaD3_3_7.png');
-      -webkit-transition: opacity 1s ease 7s;
-      transition: opacity 1s ease 7s;           
+      -webkit-transition: opacity 1s ease 8s;
+      transition: opacity 1s ease 8s;           
     }       
 
     .brush{
@@ -89,38 +89,38 @@
         transform: translate3d(0, 0, 0);
       }
       20% {     
-        transform: translate3d(-550px, -400px, 0) rotate(-135deg);
+        transform: translate3d(-550px, -350px, 0) rotate(-135deg);
       }
       26% {     
-        transform: translate3d(-350px, -350px, 0) rotate(-135deg);
+        transform: translate3d(-350px, -300px, 0) rotate(-135deg);
        
       } 
       32% {     
-        transform: translate3d(-550px, -300px, 0) rotate(-135deg);
+        transform: translate3d(-550px, -250px, 0) rotate(-135deg);
     
       } 
       38% {     
-        transform: translate3d(-350px, -220px, 0) rotate(-135deg);
+        transform: translate3d(-350px, -200px, 0) rotate(-135deg);
 
       }
       44% {     
-        transform: translate3d(-550px, -200px, 0) rotate(-135deg);
+        transform: translate3d(-550px, -150px, 0) rotate(-135deg);
 
       } 
       50% {     
-        transform: translate3d(-350px, -150px, 0) rotate(-135deg);
+        transform: translate3d(-350px, -100px, 0) rotate(-135deg);
 
       }
       56% {     
-        transform: translate3d(-550px, -100px, 0) rotate(-135deg);
+        transform: translate3d(-550px, -0px, 0) rotate(-135deg);
 
       }
       62% {     
-        transform: translate3d(-350px, -50px, 0) rotate(-135deg);
+        transform: translate3d(-350px, 50px, 0) rotate(-135deg);
 
       }
       80% {     
-        transform: translate3d(-550px, 0, 0) rotate(-135deg);
+        transform: translate3d(-550px, 100px, 0) rotate(-135deg);
       }
       100% {     
         transform: translate3d(0, 0, 0) rotate(0deg);
@@ -220,133 +220,109 @@
 
     .my-loupe img{
       position: absolute;
-      width: 1024px;
-      top: -276px;
-      left: -292px;
+      width: 224px;
+      top: 10px;
+      left: 0px;
       transform: scale(2, 2);
     }
 
     #body.active .my-loupe {
-      -webkit-animation: loupeGo 5s backwards; 
-      animation:         loupeGo 5s backwards; 
-      -webkit-animation-delay: 5s;
-      animation-delay: 5s;
+      -webkit-animation: loupeGo 4s backwards; 
+      animation:         loupeGo 4s backwards; 
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s;
     }
 
     @keyframes loupeGo {
       0%   {     
-        left: 338px;
-        top: 291px;
+        transform: translate3d(0, 0, 0);
         opacity: 0;
       }
-      20% {  
-        left: 338px;
-        top: 291px;         
+      10% {  
+        transform: translate3d(0, 0, 0);       
         opacity:1;        
       }
       60% {     
-        top: 326px;
-        left: 383px;
+        transform: translate3d(30px, 20px, 0);
       } 
-      80% {     
-        top: 326px;
-        left: 383px;
+      90% {     
+        transform: translate3d(30px, 20px, 0);
         opacity:1;        
       }
       100% {
-        top: 326px;
-        left: 383px;           
+        transform: translate3d(30px, 20px, 0);          
         opacity:0;
       } 
-    }    
+    }       
 
     @-webkit-keyframes loupeGo {
       0%   {     
-        left: 338px;
-        top: 291px;
+        transform: translate3d(0, 0, 0);
         opacity: 0;
       }
-      20% {  
-        left: 338px;
-        top: 291px;         
+      10% {  
+        transform: translate3d(0, 0, 0);       
         opacity:1;        
       }
       60% {     
-        top: 326px;
-        left: 383px;
+        transform: translate3d(30px, 20px, 0);
       } 
-      80% {     
-        top: 326px;
-        left: 383px;
+      90% {     
+        transform: translate3d(30px, 20px, 0);
         opacity:1;        
       }
       100% {
-        top: 326px;
-        left: 383px;           
+        transform: translate3d(30px, 20px, 0);          
         opacity:0;
       } 
     }
 
 
     #body.active .my-loupe img {
-      -webkit-animation: imgGo 5s backwards; 
-      animation:         imgGo 5s backwards; 
-      -webkit-animation-delay: 5s;
-      animation-delay: 5s;
+      -webkit-animation: imgGo 4s backwards; 
+      animation:         imgGo 4s backwards; 
+      -webkit-animation-delay: 6s;
+      animation-delay: 6s;
 
     }
 
     @keyframes imgGo {
       0%   {     
-        top: -276px;
-        left: -292px;
-        opacity: 0;
+        transform: translate3d(0, 0, 0)  scale(2, 2);
       }
-      20% {  
-        top: -276px;
-        left: -292px;        
-        opacity:1;        
+      10% {  
+        transform: translate3d(0, 0, 0)  scale(2, 2);       
+    
       }
       60% {     
-        left: -324px; 
-        top: -348px;
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);
       } 
-      80% {     
-        left: -324px; 
-        top: -348px;
-        opacity:1;        
+      90% {     
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);
+      
       }
       100% {
-        left: -324px; 
-        top: -348px;          
-        opacity:0;
-      } 
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);          
+      }  
     }    
 
     @-webkit-keyframes imgGo {
       0%   {     
-        top: -276px;
-        left: -292px;
-        opacity: 0;
+        transform: translate3d(0, 0, 0)  scale(2, 2);
       }
-      20% {  
-        top: -276px;
-        left: -292px;        
-        opacity:1;        
+      10% {  
+        transform: translate3d(0, 0, 0)  scale(2, 2);       
+    
       }
       60% {     
-        left: -324px; 
-        top: -348px;
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);
       } 
-      80% {     
-        left: -324px; 
-        top: -348px;
-        opacity:1;        
+      90% {     
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);
+      
       }
       100% {
-        left: -324px; 
-        top: -348px;          
-        opacity:0;
+        transform: translate3d(-50px, -35px, 0)  scale(2, 2);          
       } 
     }    
 
@@ -371,13 +347,12 @@
     .box_2 {
       background-image: url('./sources/images/sl_04/CaD3_3_3.png');
       height:0;
-      opacity: 0; 
-      -webkit-transition: all 4s ease 3s;
-      transition: all 4s ease 3s;              
+      opacity: 1; 
+      -webkit-transition: all 2s linear 3s;
+      transition: all 2s linear 3s;              
     }  
 
     #body.active .box_2 {
-      opacity: 1;
       height: 376px; 
     }      
   </style>
@@ -393,7 +368,7 @@
   <div class="box box_2"></div>  
   <div class="plug"></div>
   <div class="my-loupe">
-    <img src="./sources/images/sl_04/CaD3_3_2.jpg" alt="">
+    <img src="./sources/images/sl_04/CaD3_3_3.png" alt="">
   </div>  
   <div class="brush"></div>
 
@@ -414,7 +389,7 @@
       
       setTimeout(function(){
         $('#body').addClass('active');
-      }, 1000);
+      }, 100);
     });
 
 
